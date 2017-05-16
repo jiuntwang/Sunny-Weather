@@ -1,5 +1,5 @@
 <div ng-app class="jumbotron" ng-controller="MainCtrl">
-  <h1>Weather for {{current.name}}</h1>
+  <h1>Select Your City</h1>
   <p class="lead">
     <div ng-init="location='Seattle'">
         <p>
@@ -8,18 +8,17 @@
           </label>
         </p>
         <p>
-          <button class="btn btn-lg btn-primary" ng-click="refreshCurrent()">Get Current Weather</button>
+          <button class="btn btn-lg btn-primary" ng-click="findCities()">Find City</button>
         </p>
-      <dl>
-        <dt>Currently</dt>
-        <dd>{{current.weather[0].main}}</dd>
-        <dd>{{current.weather[0].description}}</dd>
+    </div>
+    <div ng-if="searchQuery">
+      <p class="lead">{{citiesFound.count}} cities found matching the query: {{searchQuery}}.</p>
+      <dl ng-repeat="city in citiesFound.list">
+        <dt>{{city.name}}, {{city.sys.country}}</dt>
+        <dd>{{city.weather[0].main}} - {{city.weather[0].description}}</dd>
         <dt>Temperature</dt>
-        <dd>{{current.main.temp}}</dd>
-        <dt>Wind</dt>
-        <dd>{{current.wind.speed}} mph at {{current.wind.deg}} degrees</dd>
-        <dt>Clouds</dt>
-        <dd>{{current.clouds.all}}%</dd>
+        <dd>{{city.main.temp}} &deg;F</dd>
+        <dd><a ng-href="/#/current/{{city.id}}" class="btn btn-lg btn-primary">View Weather</a></dd>
       </dl>
     </div>
   </p>

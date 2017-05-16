@@ -8,12 +8,13 @@
  * Controller of the sunnyWeatherApp
  */
 angular.module('sunnyWeatherApp')
-  .controller('MainCtrl', function ($scope, current) {
-    $scope.current = current.query();
-    
-    $scope.refreshCurrent = function(){
-        $scope.current = current.query({
-            location: $scope.location
+ .controller('MainCtrl', function ($scope, citysearch) {
+    $scope.citiesFound = citysearch.find();
+
+    $scope.findCities = function(){
+        $scope.citiesFound = citysearch.find({
+            query: $scope.location
         });
+        $scope.searchQuery = $scope.location;
     };
   });
