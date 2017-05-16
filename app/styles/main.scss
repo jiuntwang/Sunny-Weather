@@ -89,3 +89,13 @@ body {
     border-bottom: 0;
   }
 }
+
+//Custom Styling
+
+dl.weather-forecast.ng-scope {
+  background-color: lightblue;
+  max-width: 250px;
+  padding: 15px;
+  margin: 10px;
+  float: left;
+}
