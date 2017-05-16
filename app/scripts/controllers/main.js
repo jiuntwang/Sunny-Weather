@@ -8,8 +8,9 @@
  * Controller of the sunnyWeatherApp
  */
 angular.module('sunnyWeatherApp')
- .controller('MainCtrl', function ($scope, citysearch) {
+ .controller('MainCtrl', function ($scope, citysearch, $localStorage) {
     $scope.citiesFound = citysearch.find();
+    $scope.storage = $localStorage;
 
     $scope.findCities = function(){
         $scope.citiesFound = citysearch.find({
