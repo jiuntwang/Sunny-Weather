@@ -9,6 +9,9 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 // @import "buttons";
 @import "transitions";
 
+//Custom Imported Fonts
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Pompiere');
+
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
@@ -18,7 +21,24 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 
 body {
   padding: 0;
+  background-color: ghostwhite;
 }
+
+.jumbotron h1 {
+  font-family: 'Pompiere';
+  font-size: 48px;
+}
+
+h4 {
+  font-family: 'Pompiere';
+  font-size: 22px;
+  font-weight: bold;
+}
+
+p {
+  font-family: 'Open Sans';
+}
+
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
@@ -59,8 +79,8 @@ body {
   border-bottom: 1px solid #e5e5e5;
 
   .btn {
-    font-size: 21px;
-    padding: 14px 24px;
+    font-size: 16px;
+    padding: 8px 12px;
   }
 }
 
@@ -76,7 +96,7 @@ body {
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   .container {
-    max-width: 730px;
+    max-width: 1000px;
   }
 
   /* Remove the padding we set earlier */
@@ -104,4 +124,19 @@ dl.weather-forecast.ng-scope {
   padding: 15px;
   margin: 10px;
   float: left;
+}
+
+//Saved Cities List
+li.ng-scope {
+  padding: 5px;
+}
+
+//Select Your City
+.jumbotron.ng-scope {
+  max-width: 600px;
+  margin: auto;
+}
+
+p.lead {
+  margin-bottom: 25px;
 }

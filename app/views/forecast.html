@@ -1,4 +1,4 @@
-<h1>16-day Forecast for {{forecastData.city.name}} {{forecastData.city.country}}</h1>
+<h1>16-Day Forecast for {{forecastData.city.name}} {{forecastData.city.country}}</h1>
 <dl ng-repeat="prediction in forecastData.list" class="weather-forecast">
     <dt>Forecast for {{prediction.dt*1000 | date:'MMM dd, yyyy'}}</dt>
     <dd>{{prediction.weather[0].main}}</dd>
