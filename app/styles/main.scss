@@ -24,22 +24,6 @@ body {
   background-color: ghostwhite;
 }
 
-.jumbotron h1 {
-  font-family: 'Pompiere';
-  font-size: 48px;
-}
-
-h4 {
-  font-family: 'Pompiere';
-  font-size: 22px;
-  font-weight: bold;
-}
-
-p {
-  font-family: 'Open Sans';
-}
-
-
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .marketing,
@@ -116,7 +100,40 @@ p {
   }
 }
 
-//Custom Styling
+
+///Custom Styling - Home Page///
+
+//Select Your City
+.jumbotron.ng-scope {
+  max-width: 600px;
+  margin: auto;
+  background-color: white;
+  border: 2px solid grey;
+  padding: 10px;
+}
+
+p.lead {
+  margin-bottom: 25px;
+}
+
+li.ng-scope {
+  padding: 5px;
+}
+
+ul.saved-cities-list {
+  list-style-type: none;
+
+  li.ng-scope {
+    float: left;
+  }
+}
+
+
+
+///END - Custom Styling - Home Page///
+
+
+///Custom Styling - 16 Day Forecast///
 
 dl.weather-forecast.ng-scope {
   background-color: lightblue;
@@ -125,18 +142,27 @@ dl.weather-forecast.ng-scope {
   margin: 10px;
   float: left;
 }
+///END - Custom Styling - 16 Day Forecast///
 
-//Saved Cities List
-li.ng-scope {
-  padding: 5px;
+
+///Typography///
+.jumbotron h1 {
+  font-family: 'Pompiere';
+  font-size: 48px;
 }
 
-//Select Your City
-.jumbotron.ng-scope {
-  max-width: 600px;
-  margin: auto;
+h2 {
+  font-family: 'Pompiere';
+  font-size: 30px; 
 }
 
-p.lead {
-  margin-bottom: 25px;
+h4 {
+  font-family: 'Pompiere';
+  font-size: 22px;
+  font-weight: bold;
 }
+
+p {
+  font-family: 'Open Sans';
+}
+///END Typography///
