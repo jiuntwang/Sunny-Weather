@@ -13,7 +13,10 @@
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
+    
     <!-- endbuild -->
+    <script type="text/javascript" src="instafeed.min.js"></script>
+ 
   </head>
   <body ng-app="sunnyWeatherApp">
     <!--[if lte IE 8]>
@@ -51,6 +54,24 @@
     <div class="container">
     <div ng-view=""></div>
     </div>
+    </div>
+
+    <div class="container">
+        <h2>Instagram Feed</h2>
+        <div id="instafeed"></div>
+          <script type="text/javascript">
+           var feed = new Instafeed({
+           get: 'user',
+           userId: '32650331',
+           clientId: 'a67b319d2db94bb1847c9d2206b79b8c',
+           accessToken: '32650331.a67b319.753968fc47574cf9bd262666d09c1074',
+           template: '<a class="animation" href="{{link}}"><img src="{{image}}" /></a>',
+           limit: 3,
+           resolution: 'low_resolution'
+           });
+           feed.run();
+           </script>
+    </div>
 
     <div class="footer">
       <div class="container">
@@ -69,6 +90,7 @@
        ga('create', 'UA-XXXXX-X');
        ga('send', 'pageview');
     </script>
+    
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
