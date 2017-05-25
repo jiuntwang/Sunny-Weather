@@ -15,6 +15,7 @@
         <dt>{{city.name}}, {{city.sys.country}}</dt>
         <dd>{{city.weather[0].main}} - {{city.weather[0].description}}</dd>
         <dt>Temperature</dt>
+        <dd class="forecast-icon"><img src="http://openweathermap.org/img/w/{{city.weather[0].icon}}.png" alt="icon" style="width:100px;height:100px;"></dd>
         <dd>{{city.main.temp}} &deg;F</dd>
         <dd><a ng-href="#!/current/{{city.id}}" class="btn btn-lg btn-primary">View Weather</a></dd>
       </dl>
