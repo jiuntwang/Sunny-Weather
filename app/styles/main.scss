@@ -128,9 +128,29 @@ ul.saved-cities-list {
   }
 }
 
-
-
 ///END - Custom Styling - Home Page///
+
+
+//Custom Styling - Current Weather///
+.current-container.ng-scope {
+  background-color: lightblue;
+  padding: 30px;
+  border: 2px solid grey;
+  max-width: 600px;
+  margin: auto;
+
+      h1.ng-binding {
+      text-align: center;
+    }
+
+    .current-weather {
+      margin: auto;
+      background-color: pink;
+      padding: 30px;
+    }
+}
+
+///END - Custom Styling - Current Weather//
 
 
 ///Custom Styling - 16 Day Forecast///
@@ -146,7 +166,7 @@ dl.weather-forecast.ng-scope {
 
 
 ///Typography///
-.jumbotron h1 {
+.jumbotron h1, h1 {
   font-family: 'Pompiere';
   font-size: 48px;
 }
