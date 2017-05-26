@@ -136,18 +136,23 @@ ul.saved-cities-list {
   background-color: lightblue;
   padding: 30px;
   border: 2px solid grey;
+  border-radius: 6px;
   max-width: 600px;
   margin: auto;
 
       h1.ng-binding {
-      text-align: center;
+        text-align: center;
     }
 
-    .current-weather {
-      margin: auto;
-      background-color: pink;
-      padding: 30px;
-    }
+      .current-weather {
+        margin: auto;
+        background-color: pink;
+        padding: 30px;
+
+      dt, dd {
+        display: inline;
+        }
+      }
 }
 
 ///END - Custom Styling - Current Weather//
