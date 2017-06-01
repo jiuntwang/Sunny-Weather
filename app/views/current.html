@@ -38,20 +38,22 @@
 
 <div class="container current-forecast">
     <div class="row forecast-icon">
-        <div class="col-md-3">
+        <div class="col-md-2">
             <img src="http://openweathermap.org/img/w/{{currentWeather.weather[0].icon}}.png" alt="icon" style="width:100px;height:100px;">
         </div>
-        <div class="col-md-3">
-            <p class="current-temp">{{currentWeather.main.temp}} &deg;F</p>
+        <div class="col-md-2" id="temp">
+            <strong><p class="current-temp">{{currentWeather.main.temp}} &deg;F</p></strong>
         </div>
-        <div class="col-md-3">
-            <p class="max-temp">High: {{currentWeather.main.temp_max}} &deg;F</p>
-            <p class="min-temp">Low: {{currentWeather.main.temp_min}} &deg;F</p>
+        <div class="col-md-2" id="temp">
+            <p class="max-temp"><strong>High:</strong> {{currentWeather.main.temp_max}} &deg;F</p>
+            <p class="min-temp"><strong>Low:</strong> {{currentWeather.main.temp_min}} &deg;F</p>
         </div>
-        <div class="col-md-3">
-            <p>{{currentWeather.weather[0].main}} - {{currentWeather.weather[0].description}}</p>
-            <div class="current-wind">Wind - {{currentWeather.wind.speed}} mph at {{currentWeather.wind.deg}} &deg;</div>
-            <div class="current-clouds">Clouds - {{currentWeather.clouds.all}}%</div>
+        <!--<div class="col-md-1" id="vert-line">
+        </div>-->
+        <div class="col-md-6" id="vert-line">
+            <p><strong>Currently:</strong> {{currentWeather.weather[0].main}}, {{currentWeather.weather[0].description}}</p>
+            <p class="current-wind"><strong>Wind:</strong> {{currentWeather.wind.speed}} mph at {{currentWeather.wind.deg}} &deg;</p>
+            <p class="current-clouds"><strong>Clouds:</strong> {{currentWeather.clouds.all}}%</p>
         </div>
     </div>
 </div>
