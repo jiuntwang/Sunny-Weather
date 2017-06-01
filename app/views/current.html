@@ -33,26 +33,29 @@
 </div>
 
 
-<div class='current-container'>
+<div class="current-container">
 <h1>Current Weather for {{currentWeather.name}}</h1>
 
-<dl class='current-weather'>
-    <dt>Currently</dt>
-    <dd>{{currentWeather.weather[0].main}}</dd>
-    <dd>{{currentWeather.weather[0].description}}</dd>
-
-    <dt class='current-temp'>Temperature</dt>
-    <dd>{{currentWeather.main.temp}} &deg;F</dd>
-    <dd class="forecast-icon"><img src="http://openweathermap.org/img/w/{{currentWeather.weather[0].icon}}.png" alt="icon" style="width:100px;height:100px;"></dd>
-    <dd class='max-temp'>High: {{currentWeather.main.temp_max}} &deg;F</dd>
-    <dd class='min-temp'>Low: {{currentWeather.main.temp_min}} &deg;F</dd>
-
-    <dt class='current-wind'>Wind</dt>
-    <dd>{{currentWeather.wind.speed}} mph at {{currentWeather.wind.deg}} &deg;</dd>
-    
-    <dt class='current-clouds'>Clouds</dt>
-    <dd>{{currentWeather.clouds.all}}%</dd>
-</dl>
+<div class="container current-forecast">
+    <div class="row forecast-icon">
+        <div class="col-md-3">
+            <img src="http://openweathermap.org/img/w/{{currentWeather.weather[0].icon}}.png" alt="icon" style="width:100px;height:100px;">
+        </div>
+        <div class="col-md-3">
+            <p class="current-temp">{{currentWeather.main.temp}} &deg;F</p>
+        </div>
+        <div class="col-md-3">
+            <p class="max-temp">High: {{currentWeather.main.temp_max}} &deg;F</p>
+            <p class="min-temp">Low: {{currentWeather.main.temp_min}} &deg;F</p>
+        </div>
+        <div class="col-md-3">
+            <p>{{currentWeather.weather[0].main}} - {{currentWeather.weather[0].description}}</p>
+            <div class="current-wind">Wind - {{currentWeather.wind.speed}} mph at {{currentWeather.wind.deg}} &deg;</div>
+            <div class="current-clouds">Clouds - {{currentWeather.clouds.all}}%</div>
+        </div>
+    </div>
+</div>
+</div>
 
 <p><a ng-href="#!/forecast/{{cityID}}" class="btn btn-lg btn-primary">View 16-day Forecast</a></p>
 
