@@ -13,55 +13,55 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Pompiere');
 
 .browsehappy {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
 }
 
 body {
-  padding: 0;
-  background-color: transparent;
-  background-image: url("../images/sky-field.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
+    padding: 0;
+    background-color: transparent;
+    background-image: url("../images/sky-field.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 ///Custom Styling - Home Page///
 
 //Select Your City
 .jumbotron.ng-scope {
-  max-width: 800px;
-  margin: 25px auto auto auto;
-  background-color: rgba(255,255,255, 0.75);
-  border: 2px solid white;
-  padding: 10px;
-  text-align: center;
-    #find-btn.btn {
-    font-size: 16px;
-    padding: 8px 12px;
-  }
+    max-width: 800px;
+    margin: 25px auto auto auto;
+    background-color: rgba(255,255,255, 0.75);
+    border: 2px solid white;
+    padding: 10px;
+    text-align: center;
+        #find-btn.btn {
+        font-size: 16px;
+        padding: 8px 12px;
+    }
 }
 
 p.lead {
-  margin-bottom: 25px;
+    margin-bottom: 25px;
 }
 
 p.ng-scope {
-  margin: 0 auto 10px auto;
-  text-align: center;
+    margin: 0 auto 10px auto;
+    text-align: center;
 }
 
 li.ng-scope {
-  padding: 5px;
+    padding: 5px;
 }
 
 ul.saved-cities-list {
-  list-style-type: none;
+    list-style-type: none;
 
-  li.ng-scope {
-    float: left;
-  }
+    li.ng-scope {
+        float: left;
+    }
 }
 
 ///END - Custom Styling - Home Page///
@@ -70,12 +70,12 @@ ul.saved-cities-list {
 //Custom Styling - About Page///
 
 #aboutApp.ng-scope {
-  background-color:rgba(255,255,255, 0.75);
-  padding: 10px 0px 10px 35px;
-  border: 2px solid white;
-  border-radius: 6px;
-  max-width: 800px;
-  margin: 20px auto 20px auto;
+    background-color:rgba(255,255,255, 0.75);
+    padding: 10px 0px 10px 35px;
+    border: 2px solid white;
+    border-radius: 6px;
+    max-width: 800px;
+    margin: 20px auto 20px auto;
 }
 
 ///END - Custom Styling - About Page///
@@ -83,39 +83,41 @@ ul.saved-cities-list {
 
 //Custom Styling - Current Weather///
 .current-container.ng-scope {
-  background-color:rgba(255,255,255, 0.75);
-  padding: 15px;
-  border: 2px solid white;
-  border-radius: 6px;
-  max-width: 800px;
-  margin: 20px auto 20px auto;
+    background-color:rgba(255,255,255, 0.75);
+    padding: 15px;
+    border: 2px solid white;
+    border-radius: 6px;
+    max-width: 800px;
+    margin: 20px auto 20px auto;
 
-      h1.ng-binding {
-        text-align: center;
-    }
-
-      .current-temp.ng-binding {
-        font-size: 25px;
-      }
-      img {
-        border: 2px solid;
-        border-radius: 50px;
-        padding: 5px;
-      }
-      .container.current-forecast, .row.forecast-icon {
-          max-width: 775px;
-          margin-top: 15px;
-
-          #vert-line {
-            border-left: 2px solid black;
-            height: 75px;
-            padding-left: 30px;
-          }
-
-          #temp.col-md-2 {
+        h1.ng-binding {
             text-align: center;
-          }
-      }
+        }
+
+        .current-temp.ng-binding {
+            font-size: 25px;
+        }
+
+        img {
+            border: 2px solid;
+            border-radius: 50px;
+            padding: 5px;
+        }
+        
+        .container.current-forecast, .row.forecast-icon {
+            max-width: 775px;
+            margin-top: 15px;
+            
+            #vert-line {
+                border-left: 2px solid black;
+                height: 75px;
+                padding-left: 30px;
+            }
+            
+            #temp.col-md-2 {
+                text-align: center;
+            }
+        }
 }
 
 ///END - Custom Styling - Current Weather//
@@ -124,19 +126,19 @@ ul.saved-cities-list {
 ///Custom Styling - 7 Day Forecast///
 
 .forecast-data {
-  background-color: rgba(255,255,255, 0.75);
-  max-width: 250px;
-  padding: 15px;
-  margin: 10px;
-  float: left;
-  text-align: center;
-  border: 2px solid white;
-  border-radius: 5px;
+    background-color: rgba(255,255,255, 0.75);
+    max-width: 250px;
+    padding: 15px;
+    margin: 10px;
+    float: left;
+    text-align: center;
+    border: 2px solid white;
+    border-radius: 5px;
 }
 
 .date {
-  font-family: 'Pompiere';
-  font-size: 24px;
+    font-family: 'Pompiere';
+    font-size: 24px;
 }
 
 ///END - Custom Styling - 16 Day Forecast///
@@ -144,27 +146,28 @@ ul.saved-cities-list {
 
 ///Typography///
 .jumbotron h1, h1 {
-  font-family: 'Pompiere';
-  font-size: 40px;
+    font-family: 'Pompiere';
+    font-size: 40px;
 }
 
 h2 {
-  font-family: 'Pompiere';
-  font-size: 30px; 
+    font-family: 'Pompiere';
+    font-size: 30px; 
 }
 
 h3 {
-  font-family: 'Pompiere';
-  font-size: 26px; 
+    font-family: 'Pompiere';
+    font-size: 26px; 
 }
 
 h4 {
-  font-family: 'Pompiere';
-  font-size: 22px;
-  font-weight: bold;
+    font-family: 'Pompiere';
+    font-size: 22px;
+    font-weight: bold;
 }
 
 p {
-  font-family: 'Open Sans';
+    font-family: 'Open Sans';
 }
+
 ///END Typography///

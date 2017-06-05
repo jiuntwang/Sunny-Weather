@@ -1,62 +1,61 @@
 <div ng-app class="jumbotron" ng-controller="MainCtrl">
-  <h1>Select Your City</h1>
-  <p class="lead">
-    <div ng-init="location='Seattle'">
-        <p>
-          <label for="location">Location:
+    <h1>Select Your City</h1>
+    <p class="lead">
+        <div ng-init="location='Seattle'">
+            <p>
+                <label for="location">Location:
             <input type="text" name="location" ng-model="location">
           </label>
-          <button class="btn btn-md btn-primary" ng-click="findCities()">Find City</button>
-        </p>
-    </div>
-    <div ng-if="searchQuery">
-      <p class="lead">{{citiesFound.count}} cities found matching the query: {{searchQuery}}.</p>
-      <dl ng-repeat="city in citiesFound.list">
-        <dt>{{city.name}}, {{city.sys.country}}</dt>
-        <dd>{{city.weather[0].main}} - {{city.weather[0].description}}</dd>
-        <dt>Temperature</dt>
-        <dd class="forecast-icon"><img src="http://openweathermap.org/img/w/{{city.weather[0].icon}}.png" alt="icon" style="width:100px;height:100px;"></dd>
-        <dd>{{city.main.temp}} &deg;F</dd>
-        <dd><a ng-href="#!/current/{{city.id}}" class="btn btn-lg btn-primary">View Weather</a></dd>
-      </dl>
-    </div>
-  </p>
+                <button class="btn btn-md btn-primary" ng-click="findCities()">Find City</button>
+            </p>
+        </div>
+        <div ng-if="searchQuery">
+            <p class="lead">{{citiesFound.count}} cities found matching the query: {{searchQuery}}.</p>
+            <dl ng-repeat="city in citiesFound.list">
+                <dt>{{city.name}}, {{city.sys.country}}</dt>
+                <dd>{{city.weather[0].main}} - {{city.weather[0].description}}</dd>
+                <dt>Temperature</dt>
+                <dd class="forecast-icon"><img src="http://openweathermap.org/img/w/{{city.weather[0].icon}}.png" alt="icon" style="width:100px;height:100px;"></dd>
+                <dd>{{city.main.temp}} &deg;F</dd>
+                <dd><a ng-href="#!/current/{{city.id}}" class="btn btn-lg btn-primary">View Weather</a></dd>
+            </dl>
+        </div>
+    </p>
 </div>
 
 <div ng-if="storage.savedCities">
-  <h2>Saved Cities</h2>
-  <ul class="saved-cities-list">
-    <li ng-repeat="city in storage.savedCities">
-      <a ng-href="#!/current/{{city.id}}" class="btn btn-md btn-primary">{{city.name}}</a>
-    </li>
-  </ul>
+    <h2>Saved Cities</h2>
+    <ul class="saved-cities-list">
+        <li ng-repeat="city in storage.savedCities">
+            <a ng-href="#!/current/{{city.id}}" class="btn btn-md btn-primary">{{city.name}}</a>
+        </li>
+    </ul>
 </div>
 
 
 <div class="current-container">
-<h1>Current Weather for {{currentWeather.name}}</h1>
-
-<div class="container current-forecast">
-    <div class="row forecast-icon">
-        <div class="col-md-2">
-            <img src="http://openweathermap.org/img/w/{{currentWeather.weather[0].icon}}.png" alt="icon" style="width:100px;height:100px;">
-        </div>
-        <div class="col-md-2" id="temp">
-            <strong><p class="current-temp">{{currentWeather.main.temp}} &deg;F</p></strong>
-        </div>
-        <div class="col-md-2" id="temp">
-            <p class="max-temp"><strong>High:</strong> {{currentWeather.main.temp_max}} &deg;F</p>
-            <p class="min-temp"><strong>Low:</strong> {{currentWeather.main.temp_min}} &deg;F</p>
-        </div>
-        <!--<div class="col-md-1" id="vert-line">
+    <h1>Current Weather for {{currentWeather.name}}</h1>
+    <div class="container current-forecast">
+        <div class="row forecast-icon">
+            <div class="col-md-2">
+                <img src="http://openweathermap.org/img/w/{{currentWeather.weather[0].icon}}.png" alt="icon" style="width:100px;height:100px;">
+            </div>
+            <div class="col-md-2" id="temp">
+                <strong><p class="current-temp">{{currentWeather.main.temp}} &deg;F</p></strong>
+            </div>
+            <div class="col-md-2" id="temp">
+                <p class="max-temp"><strong>High:</strong> {{currentWeather.main.temp_max}} &deg;F</p>
+                <p class="min-temp"><strong>Low:</strong> {{currentWeather.main.temp_min}} &deg;F</p>
+            </div>
+            <!--<div class="col-md-1" id="vert-line">
         </div>-->
-        <div class="col-md-6" id="vert-line">
-            <p><strong>Currently:</strong> {{currentWeather.weather[0].main}}, {{currentWeather.weather[0].description}}</p>
-            <p class="current-wind"><strong>Wind:</strong> {{currentWeather.wind.speed}} mph at {{currentWeather.wind.deg}} &deg;</p>
-            <p class="current-clouds"><strong>Clouds:</strong> {{currentWeather.clouds.all}}%</p>
+            <div class="col-md-6" id="vert-line">
+                <p><strong>Currently:</strong> {{currentWeather.weather[0].main}}, {{currentWeather.weather[0].description}}</p>
+                <p class="current-wind"><strong>Wind:</strong> {{currentWeather.wind.speed}} mph at {{currentWeather.wind.deg}} &deg;</p>
+                <p class="current-clouds"><strong>Clouds:</strong> {{currentWeather.clouds.all}}%</p>
+            </div>
         </div>
     </div>
-</div>
 </div>
 
 <p><a ng-href="#!/forecast/{{cityID}}" class="btn btn-lg btn-primary">View 7-day Forecast</a></p>
